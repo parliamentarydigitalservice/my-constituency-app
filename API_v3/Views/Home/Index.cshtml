@@ -1,0 +1,23 @@
+﻿@section styles
+{
+    @Styles.Render("~/Content/css")
+}
+
+<h1>UK Parliament My Constituency API</h1>
+
+<textarea id="input">{"Select":{Fields:["constituencyname","busconstpctchange"]},"Where":[{"Key":"onsconstid","Value":"E14000571"}]}</textarea>
+<div class="clear"></div>
+<div class="commands">
+    <button id="discover">api discovery</button>
+    <button id="query">query api</button>
+    <select id="dataset"></select>
+</div>
+<textarea id="output"></textarea>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/testHarness")
+    <script type="text/javascript">
+        testInit('@Href("~/")');
+    </script>
+}
