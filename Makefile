@@ -16,6 +16,7 @@ checkout_to_release:
 deploy_to_release:
 	aws s3 sync \
 		--exclude ".git/*" \
+		--exclude "gocd/*" \
 		--exclude "Makefile" \
 		--exclude "README.md" \
 		--acl=public-read --delete . s3://$(AWS_ACCOUNT).my-constituency
