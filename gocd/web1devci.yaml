@@ -19,6 +19,6 @@ pipelines:
                       - deploy_to_release
 
 environments:
-  Web.DEVCI:
+  WebDEVCI:
     pipelines:
       - my-constituency
